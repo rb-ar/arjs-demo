@@ -37,7 +37,8 @@
         id="desktop-hide"
         renderer="logarithmicDepthBuffer: true;"
         arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-        gesture-detector>
+        gesture-detector
+    >
 
         <a-marker preset="custom" type='pattern' url='pattern/asperger.patt'>
             <a-entity
@@ -59,7 +60,7 @@
 
         <a-marker preset="custom" type='pattern' url='pattern/a.patt'>
             <a-entity
-            gltf-model="models/mecha_shen_long/model.gltf"
+                gltf-model="models/mecha_shen_long/model.gltf"
                 scale="0.2 0.2 0.2"
                 position="0 0 0"
                 gesture-handler>
@@ -68,7 +69,7 @@
 
         <a-marker preset="custom" type='pattern' url='pattern/twofold.patt'>
             <a-entity
-            gltf-model="models/cesium_man/CesiumMan.gltf"
+                gltf-model="models/cesium_man/CesiumMan.gltf"
                 scale="0.9 0.9 0.9"
                 position="0 0 0"
                 gesture-handler
@@ -84,10 +85,5 @@
         <img src="pattern/a.png" />
         <img src="pattern/twofold.png" />
     </div>
-
-    <!-- https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html -->
-    <!-- https://www.qrcode-monkey.com/#url -->
-    <!-- https://github.com/mrdoob/three.js/tree/dev/examples/models/gltf -->
-    <!-- https://ar-js-org.github.io/studio/pages/marker/index.html -->
 </body>
 </html>
