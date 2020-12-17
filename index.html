@@ -7,16 +7,32 @@
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
 <body style='margin : 0px; overflow: hidden;'>
-    <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
     <a-scene embedded arjs>
-        <a-marker preset="custom" type='pattern' url='https://sss.github.io/pattern-asperger.patt'>
+        <a-marker preset="custom" type='pattern' url='https://rb-ar.github.io/asperger_pokeball.patt'>
             <a-entity
-                gltf-model="https://sss.github.io/model.gltf"
+                gltf-model="https://rb-ar.github.io/models/pokeball-low/model.gltf"
                 scale="1">
             </a-entity>
         </a-marker>
+        <a-marker preset="custom" type='pattern' url='https://rb-ar.github.io/a_misc.patt'>
+            <a-entity
+                gltf-model="https://rb-ar.github.io/models/bagelboy/model.gltf"
+                scale="1">
+            </a-entity>
+        </a-marker>
+<!--         <a-marker preset="custom" type='pattern' url='https://rb-ar.github.io/pattern-asperger.patt'>
+            <a-entity
+                gltf-model="https://rb-ar.github.io/models/earth/model.gltf"
+                scale="1">
+            </a-entity>
+        </a-marker>
+        <a-marker preset="custom" type='pattern' url='https://rb-ar.github.io/pattern-asperger.patt'>
+            <a-entity
+                gltf-model="https://rb-ar.github.io/models/phone/model.gltf"
+                scale="1">
+            </a-entity>
+        </a-marker> -->
 
-        <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
         <a-entity camera></a-entity>
     </a-scene>
 
