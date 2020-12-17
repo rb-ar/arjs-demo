@@ -5,36 +5,69 @@
 </head>
 <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-
-<body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs>
-        <a-marker preset="custom" type='pattern' url='pattern/asperger_pokeball.patt'>
-            <a-entity
-                gltf-model="models/pokeball-low/arjs-demo/model.gltf"
-                scale="1">
-            </a-entity>
-        </a-marker>
-        <a-marker preset="custom" type='pattern' url='pattern/asp_bagelboy.patt'>
-            <a-entity
-                gltf-model="models/bagelboy/model.gltf"
-                scale="1">
-            </a-entity>
-        </a-marker>
-        <a-marker preset="custom" type='pattern' url='pattern/a_earth.patt'>
-            <a-entity
-                gltf-model="models/earth/model.gltf"
-                scale="1">
-            </a-entity>
-        </a-marker>
-        <a-marker preset="custom" type='pattern' url='pattern/twofold_phone.patt'>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+<style>
+    img { 
+        max-width: 450px;
+    }
+    #desktop-hide {
+        display: none;
+    }
+    #mobile-hide {
+        display: block;
+    }
+    @media screen and (max-width: 1500px) {
+        body {
+            margin: 0px;
+            overflow: hidden;
+        }
+        #desktop-hide {
+            display: block;
+        }
+        #mobile-hide {
+            display: none;
+        }
+    }
+</style>
+<body>
+    <a-scene embedded arjs id="desktop-hide">
+        <a-marker preset="custom" type='pattern' url='pattern/asperger.patt'>
             <a-entity
                 gltf-model="models/phone/model.gltf"
-                scale="1">
+                scale="1"
+                position="0 0 0">
+            </a-entity>
+        </a-marker>
+        <a-marker preset="custom" type='pattern' url='pattern/asp.patt'>
+            <a-entity
+                gltf-model="models/jumper/model.gltf"
+                scale="1"
+                position="0 0 0">
+            </a-entity>
+        </a-marker>
+        <a-marker preset="custom" type='pattern' url='pattern/a.patt'>
+            <a-entity
+            gltf-model="models/mecha_shen_long/model.gltf"
+                scale="1"
+                position="0 0 0">
+            </a-entity>
+        </a-marker>
+        <a-marker preset="custom" type='pattern' url='pattern/twofold.patt'>
+            <a-entity
+            gltf-model="models/cesium_man/CesiumMan.gltf"
+                scale="1"
+                position="0 0 0">
             </a-entity>
         </a-marker>
 
         <a-entity camera></a-entity>
     </a-scene>
+    <div id="mobile-hide">
+        <img src="pattern/asperger.png" />
+        <img src="pattern/asp.png" />
+        <img src="pattern/a.png" />
+        <img src="pattern/twofold.png" />
+    </div>
 
     <!--https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html-->
     <!--https://www.qrcode-monkey.com/#url-->
